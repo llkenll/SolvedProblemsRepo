@@ -12,6 +12,9 @@ class Solution {
 
         for(int col = 1; col <= amount; col++){
             int remainingAmount = col - coins[0];
+            if(remainingAmount < 0){
+                continue;
+            }
             cache[0][col] = cache[0][remainingAmount];
         }
 
